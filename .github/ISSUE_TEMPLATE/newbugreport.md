@@ -1,11 +1,10 @@
 ---
 name: Bug Report
-about: File a bug report
+description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+assignees: octocat
 body:
   - type: markdown
     attributes:
@@ -24,23 +23,23 @@ body:
     attributes:
       label: What happened?
       description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see?
+      placeholder: Tell us what you see!
       value: "A bug happened!"
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: software-version # Unique ID to avoid conflict
     attributes:
       label: Version
       description: What version of our software are you running?
       options:
-        - "1.0.2 (Default)"
-        - "1.0.3 (Edge)"
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
       default: 0
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: dropdown # Correct indentation
+    id: browsers # Unique ID to avoid conflict
     attributes:
       label: What browsers are you seeing the problem on?
       multiple: true
@@ -49,19 +48,21 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
-  - type: textarea
+    validations:
+      required: true
+  - type: textarea # Correct indentation
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-  - type: checkboxes
+  - type: checkboxes # Correct indentation
     id: terms
     attributes:
-      label: Code Of Conduct
+      label: Code of Conduct
       description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
       options:
         - label: I agree to follow this project's Code of Conduct
-          required: true
+    validations:
+      required: true
 ---
-
