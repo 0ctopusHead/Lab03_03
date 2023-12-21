@@ -1,4 +1,3 @@
----
 name: Bug Report
 about: File a bug report
 title: "[Bug]: "
@@ -65,4 +64,3 @@ body:
         - label: I agree to follow this project's Code of Conduct
     validations:
       required: true
----
